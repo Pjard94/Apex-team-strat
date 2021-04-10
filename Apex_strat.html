@@ -8,8 +8,8 @@
         <h1>Welcome to Apex Strat Roulette</h1>
         <p>This is an adjustable start roulette for solo, duo or trio players, to have fun and mess around in game.</p>
         
-        <button onclick="weapons(), med()">Get your strat.</button>
-
+        <button onclick="weapons(), med(), gar(), charac(), spec()">Get your strat.</button>
+<!-- This is the weapons selector area, the button will randomly call from the weapon variable. -->
         <p id="weapon_output"></p>
         <script>
             var weapon = ["Pistols only", "Shotguns", "LMGS" ];
@@ -17,7 +17,7 @@
           document.getElementById("weapon_output").innerHTML = weapon[Math.floor(Math.random() * weapon.length)];
           }
         </script>
-
+<!-- This is the meds output area, the button will randomly call from the meds variable. -->
         <p id="meds_output"></p>
         <script>
             var meds = ["Phoenix kits are a lie", "No Syringes", "Shields only" ];
@@ -25,5 +25,32 @@
         document.getElementById("meds_output").innerHTML = meds[Math.floor(Math.random() * meds.length)];
         }
         </script>
+
+        <p id="gear_output"></p>
+        <script>
+            var gear = ["No head (no helmet)", "No body armour", "Body armour only" ];
+        function gar() {
+        document.getElementById("gear_output").innerHTML = gear[Math.floor(Math.random() * gear.length)];
+        }
+        </script>
+
+        <p id="character_output"></p>
+        <script>
+            var character = ["Loba", "Fuse", "Horizon" ];
+        function charac() {
+        document.getElementById("character_output").innerHTML = character[Math.floor(Math.random() * character.length)];
+        }
+        </script>
+
+        <p id="special_output"></p>
+        <script>
+            var special = ["The fallen. When you kill take their guns as your own.", "Stuck. The first guns you see, you pick up, they are your only guns for the game.", "Mr President. One of your players is president, the other 2 are agent, if the president dies the game is lost." ];
+        function spec() {
+        document.getElementById("special_output").innerHTML = special[Math.floor(Math.random() * special.length)];
+        }
+        </script>
+
+
+
     </body>
 </html>

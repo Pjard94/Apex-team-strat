@@ -6,7 +6,7 @@
     <body>
         <p>Click the button to display a random number.</p>
 
-        <button onclick="myFunction()">Try it</button>
+        <button onclick="myFunction(), weapons()">Try it</button>
 
         <p id="weapon_output"></p>
 
@@ -14,6 +14,14 @@
               var weapon = ["Pistols_only", "Shotguns", "LMGS" ];
             function myFunction() {
             document.getElementById("weapon_output").innerHTML = weapon[Math.floor(Math.random() * weapon.length)];
+            }
+        </script>
+<!-- this outputs 2 random weapon outputs independent of each other. -->
+            <p id="weapon_output2"></p>
+            <script>
+                var weapon = ["Pistols only", "Shotguns", "LMGS" ];
+            function weapons() {
+            document.getElementById("weapon_output2").innerHTML = weapon[Math.floor(Math.random() * weapon.length)];
             }
         </script>
     </body>
