@@ -12,7 +12,7 @@
 <!-- This is the weapons selector area, the button will randomly call from the weapon variable. -->
         <p id="weapon_output"></p>
         <script>
-            var weapon = ["Pistols only", "Shotguns", "LMGS" ];
+            var weapon = ["Pistols only", "Shotguns only", "LMGS only", "Sniper & Shotguns", "SMG only" ];
           function weapons() {
           document.getElementById("weapon_output").innerHTML = weapon[Math.floor(Math.random() * weapon.length)];
           }
@@ -36,7 +36,7 @@
 
         <p id="character_output"></p>
         <script>
-            var character = ["Loba", "Fuse", "Horizon" ];
+            var character = ["Loba", "Fuse", "Horizon", "Octane", "Wraith", "Wattson", "Revenant", "Rampart", "Pathfinder", "Mirage", "Lifeline", "Gibraltar", "Crypto", "Bloodhound", "Caustic", "Bangalore"];
         function charac() {
         document.getElementById("character_output").innerHTML = character[Math.floor(Math.random() * character.length)];
         }
@@ -44,7 +44,7 @@
 
         <p id="special_output"></p>
         <script>
-            var special = ["The fallen. When you kill take their guns as your own.", "Stuck. The first guns you see, you pick up, they are your only guns for the game.", "Mr President. One of your players is president, the other 2 are agent, if the president dies the game is lost." ];
+            var special = ["The fallen. When you kill take their guns as your own.", "Stuck. The first guns you see, you pick up, they are your only guns for the game.", "Mr President. One of your players is the president, the other 2 are agents, if the president dies the game is lost.", "No Russian. Only hip fire." ];
         function spec() {
         document.getElementById("special_output").innerHTML = special[Math.floor(Math.random() * special.length)];
         }
