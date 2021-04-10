@@ -8,12 +8,13 @@
 
         <button onclick="myFunction()">Try it</button>
 
-        <p id="demo"></p>
+        <p id="weapon_output"></p>
 
         <script>
-        function myFunction() {
-        document.getElementById("demo").innerHTML = Math.random();
-        }
+              var weapon = ["Pistols_only", "Shotguns", "LMGS" ];
+            function myFunction() {
+            document.getElementById("weapon_output").innerHTML = weapon[Math.floor(Math.random() * weapon.length)];
+            }
         </script>
     </body>
 
