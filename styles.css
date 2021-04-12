@@ -1,5 +1,9 @@
 /* Global Layout set-up*/
 body{
-    background: black;
-    color: white;
+    background: #A9A9A9;
+    color: #f0ead6;
+}
+/* Going to add some media  queries */
+@media screen and (min-width: 730px) {
+
 }
