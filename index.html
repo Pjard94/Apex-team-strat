@@ -2,63 +2,81 @@
 <html>
     <head>
         <title>Apex Strat Roulette</title>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
 
-        <h1>Welcome félagi fighter, are you ready to face my challenge?</h1>
+        <header>
+            <img>
+            <h1></h1>
+
+            <div class="nav-bar">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </header>
+
+        <h2>Welcome félagi fighter, are you ready to face my challenge?</h2>
         <p></p>
         
         <button onclick="weapons(), med(), gar(), charac(), spec(), charac2(), charac3()">Get your strat.</button>
 
-        <!-- This is the weapons selector area, the button will randomly call from the weapon variable. -->
-        <p id="weapon_output"></p>
-        <script>
-            var weapon = ["Pistols only", "Shotguns only", "LMGS only", "Sniper & Shotguns", "SMG only", "Assault rifles only","No Pink weapons (i.e.kraber)", "Only Light ammo", "Only Heavy Ammo", "Snipers only", "Only Energy Ammo", "No Shotguns", "No Snipers", "No Assualt Rifles", "No SMGs", "No Pistols", "No Scopes", "Hunter. Bow and shotguns only"];
-  
-          function weapons() {
-          document.getElementById("weapon_output").innerHTML = weapon[Math.floor(Math.random() * weapon.length)];
-          }
-        </script>
+        <div class="first-player column">
 
-        <!-- The end of the Weapons section -->
+            <!-- This is the weapons selector area, the button will randomly call from the weapon variable. -->
+            <p id="weapon_output"></p>
+            <script>
+                var weapon = ["Pistols only", "Shotguns only", "LMGS only", "Sniper & Shotguns", "SMG only", "Assault rifles only","No Pink weapons (i.e.kraber)", "Only Light ammo", "Only Heavy Ammo", "Snipers only", "Only Energy Ammo", "No Shotguns", "No Snipers", "No Assualt Rifles", "No SMGs", "No Pistols", "No Scopes", "Hunter. Bow and shotguns only"];
+    
+            function weapons() {
+            document.getElementById("weapon_output").innerHTML = weapon[Math.floor(Math.random() * weapon.length)];
+            }
+            </script>
 
-        <!-- This is the meds output area, the button will randomly call from the meds variable. -->
-        <p id="meds_output"></p>
-        <script>
-            var meds = ["Phoenix kits are a lie", "No Syringes", "Shields only", "No medkits", "No shield cells", "No shield batteries", "Health heals only", "Small heals only", "Big heals only" ];
+            <!-- The end of the Weapons section -->
 
-
-        function med() {
-        document.getElementById("meds_output").innerHTML = meds[Math.floor(Math.random() * meds.length)];
-        }
-        </script>
+            <!-- This is the meds output area, the button will randomly call from the meds variable. -->
+            <p id="meds_output"></p>
+            <script>
+                var meds = ["Phoenix kits are a lie", "No Syringes", "Shields only", "No medkits", "No shield cells", "No shield batteries", "Health heals only", "Small heals only", "Big heals only" ];
 
 
-        <!-- <p id="meds_output2"></p> -->
-        <!-- The end of the meds section -->
-
-        <!--This is the gear selector and output area, the button will randomly call from the gear variable.  -->
-        <p id="gear_output"></p>
-        <script>
-            var gear = ["No head (no helmet)", "Upgrade only", "Body armour only", "No Body. You can't repair or pick up body armour.", "No Back pack", "Pauper. White or next lowest armour", "Milion dollar man. Only Gold is worthy of adorning you"];
-
-        function gar() {
-        document.getElementById("gear_output").innerHTML = gear[Math.floor(Math.random() * gear.length)];
-        }
-        </script>
-        <!--The end of the gear section  -->
-
-        <!--This is the character selector and output area, the button will randomly call from the character variable  -->
+            function med() {
+            document.getElementById("meds_output").innerHTML = meds[Math.floor(Math.random() * meds.length)];
+            }
+            </script>
 
 
-        <p id="character_output"></p>
-        <script>
-            var character = ["Loba", "Fuse", "Horizon", "Octane", "Wraith", "Wattson", "Revenant", "Rampart", "Pathfinder", "Mirage", "Lifeline", "Gibraltar", "Crypto", "Bloodhound", "Caustic", "Bangalore", "Valkyrie"];
-        function charac() {
-        document.getElementById("character_output").innerHTML = character[Math.floor(Math.random() * character.length)];
-        }
-        </script>
+            <!-- <p id="meds_output2"></p> -->
+            <!-- The end of the meds section -->
+
+            <!--This is the gear selector and output area, the button will randomly call from the gear variable.  -->
+            <p id="gear_output"></p>
+            <script>
+                var gear = ["No head (no helmet)", "Upgrade only", "Body armour only", "No Body. You can't repair or pick up body armour.", "No Back pack", "Pauper. White or next lowest armour", "Milion dollar man. Only Gold is worthy of adorning you"];
+
+            function gar() {
+            document.getElementById("gear_output").innerHTML = gear[Math.floor(Math.random() * gear.length)];
+            }
+            </script>
+            <!--The end of the gear section  -->
+
+            <!--This is the character selector and output area, the button will randomly call from the character variable  -->
+
+
+            <p id="character_output"></p>
+            <script>
+                var character = ["Loba", "Fuse", "Horizon", "Octane", "Wraith", "Wattson", "Revenant", "Rampart", "Pathfinder", "Mirage", "Lifeline", "Gibraltar", "Crypto", "Bloodhound", "Caustic", "Bangalore", "Valkyrie"];
+            function charac() {
+            document.getElementById("character_output").innerHTML = character[Math.floor(Math.random() * character.length)];
+            }
+            </script>
+
+        </div>
 
         <p id="character_output2"></p>
         <script>
