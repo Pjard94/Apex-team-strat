@@ -7,25 +7,32 @@
     <body>
 
         <header>
-            <img>
-            <h1></h1>
+            <div class="header--container">
+                <img>
+                <h1>Apex Legends Strat Roulette</h1>
 
-            <div class="nav-bar">
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
+                <div class="nav-bar">
+                    <ul>
+                        <li><a href="#">Main</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Strat List</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
             </div>
         </header>
 
-        <h2>Welcome félagi fighter, are you ready to face my challenge?</h2>
-        <p></p>
-        
+        <div class="welcome--area">
+
+            <h2>Welcome félagi fighter, are you ready to face my challenge?</h2>
+
+        </div>
+
         <button onclick="weapons(), med(), gar(), charac(), spec(), charac2(), charac3()">Get your strat.</button>
 
         <div class="first-player column">
+
+            <input type="text" placeholder="Player 1">
 
             <!-- This is the weapons selector area, the button will randomly call from the weapon variable. -->
             <p id="weapon_output"></p>
@@ -78,39 +85,50 @@
 
         </div>
 
-        <p id="character_output2"></p>
-        <script>
-            var character = ["Loba", "Fuse", "Horizon", "Octane", "Wraith", "Wattson", "Revenant", "Rampart", "Pathfinder", "Mirage", "Lifeline", "Gibraltar", "Crypto", "Bloodhound", "Caustic", "Bangalore", "Valkyrie"];
-        function charac2() {
-        document.getElementById("character_output2").innerHTML = character[Math.floor(Math.random() * character.length)];
-        }
-        
-        </script>
+        <div class="second_player column">
 
+            <input type="text" placeholder="Player 2">
 
-        <p id="character_output3"></p>
-        <script>
-
-             
+            <p id="character_output2"></p>
+            <script>
                 var character = ["Loba", "Fuse", "Horizon", "Octane", "Wraith", "Wattson", "Revenant", "Rampart", "Pathfinder", "Mirage", "Lifeline", "Gibraltar", "Crypto", "Bloodhound", "Caustic", "Bangalore", "Valkyrie"];
-             function charac3() {   
-                document.getElementById("character_output3").innerHTML = character[Math.floor(Math.random() * character.length)];
-             }
+            function charac2() {
+            document.getElementById("character_output2").innerHTML = character[Math.floor(Math.random() * character.length)];
+            }
+            
+            </script>
+        </div>
 
-        </script>
+        <div class="third-player column">
+
+            <input type="text" placeholder="Player 3">
+
+            <p id="character_output3"></p>
+            <script>
+
+                
+                    var character = ["Loba", "Fuse", "Horizon", "Octane", "Wraith", "Wattson", "Revenant", "Rampart", "Pathfinder", "Mirage", "Lifeline", "Gibraltar", "Crypto", "Bloodhound", "Caustic", "Bangalore", "Valkyrie"];
+                function charac3() {   
+                    document.getElementById("character_output3").innerHTML = character[Math.floor(Math.random() * character.length)];
+                }
+
+            </script>
+
+        </div>
         <!--The end of the character section  -->
 
 
         <!--This is the special selector and output area, the button will randomly call from the special variable  -->
-        <p id="special_output"></p>
-        <script>
-            var special = ["The winner takes it all. When you kill take their guns as your own.", "Stuck. The first guns you see, you pick up, they are your only guns for the game.", "Mr President. One of your players is the president, the other 2 are agents, if the president dies the game is lost.", "No Russian. Only hip fire, no ADS.", "Fly by Night. When you down a person you have to rush to finish them.", "Basic bitch. You can't use your abilities. (You probably like pumpkin spiced lattes too)", "Makeshift guns. Each weapon has only 3 reloads", "Hot potato. ALL nades you come accross are live so yeet that bad boy.", "The floor is lava. You can only loot from the 1st floor up. (Second floor for you Americans)", "Crawl space. Ground floor (US:first floor) looting only"];
+        <div class="special--output">
+            <p id="special_output"></p>
+            <script>
+                var special = ["The winner takes it all. When you kill take their guns as your own.", "Stuck. The first guns you see, you pick up, they are your only guns for the game.", "Mr President. One of your players is the president, the other 2 are agents, if the president dies the game is lost.", "No Russian. Only hip fire, no ADS.", "Fly by Night. When you down a person you have to rush to finish them.", "Basic bitch. You can't use your abilities. (You probably like pumpkin spiced lattes too)", "Makeshift guns. Each weapon has only 3 reloads", "Hot potato. ALL nades you come accross are live so yeet that bad boy.", "The floor is lava. You can only loot from the 1st floor up. (Second floor for you Americans)", "Crawl space. Ground floor (US:first floor) looting only"];
 
-        function spec() {
-        document.getElementById("special_output").innerHTML = special[Math.floor(Math.random() * special.length)];
-        }
-        </script>
-
+            function spec() {
+            document.getElementById("special_output").innerHTML = special[Math.floor(Math.random() * special.length)];
+            }
+            </script>
+        </div>
         <!-- The end of the special section -->
 
     </body>

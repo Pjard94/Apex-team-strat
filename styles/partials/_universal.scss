@@ -1,0 +1,10 @@
+@use '../abstracts/index' as *;
+
+* {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $apex-primary;
+}

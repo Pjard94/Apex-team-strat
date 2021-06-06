@@ -1,0 +1,25 @@
+@use '../abstracts/index' as *;
+
+header {
+    background-color: $primary-background;
+    color: $apex-primary;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.header--container {
+    width: 100%;
+    margin: auto;
+    align-content: center;
+    text-align: center;
+}
+
+ul {
+    display: block;
+    justify-content: space-evenly;
+}
+
+li {
+    float: left;
+}
