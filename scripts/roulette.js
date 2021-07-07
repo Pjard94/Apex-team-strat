@@ -12,6 +12,15 @@ let character3;
 
 const special = ["The winner takes it all. When you kill take their guns as your own.", "Stuck. The first guns you see, you pick up, they are your only guns for the game.", "Mr President. One of your players is the president, the other 2 are agents, if the president dies the game is lost.", "No Russian. Only hip fire, no ADS.", "Fly by Night. When you down a person you have to rush to finish them.", "Basic bitch. You can't use your abilities. (You probably like pumpkin spiced lattes too)", "Makeshift guns. Each weapon has only 3 reloads", "Hot potato. ALL nades you come accross are live so yeet that bad boy.", "The floor is lava. You can only loot from the 1st floor up. (Second floor for you Americans)", "Crawl space. Ground floor (US:first floor) looting only"];
 
+//weapon restrictions
+function weapons() {
+    document.getElementById("weapon_output").innerHTML = weapon[Math.floor(Math.random() * weapon.length)];
+    }
+
+//medical restrictions
+function medical() {
+    document.getElementById("meds_output").innerHTML = meds[Math.floor(Math.random() * meds.length)];
+    }
 
 //gear section
 
