@@ -5,16 +5,21 @@ const meds = ["Phoenix kits are a lie", "No Syringes", "Shields only", "No medki
 
 const gear = ["No head (no helmet)", "Upgrade only", "Body armour only", "No Body. You can't repair or pick up body armour.", "No Back pack", "Pauper. White or next lowest armour", "Milion dollar man. Only Gold is worthy of adorning you"];
 
-
 const character = ["Loba", "Fuse", "Horizon", "Octane", "Wraith", "Wattson", "Revenant", "Rampart", "Pathfinder", "Mirage", "Lifeline", "Gibraltar", "Crypto", "Bloodhound", "Caustic", "Bangalore", "Valkyrie"];
 let character1;
 let character2;
 let character3;
 
+const special = ["The winner takes it all. When you kill take their guns as your own.", "Stuck. The first guns you see, you pick up, they are your only guns for the game.", "Mr President. One of your players is the president, the other 2 are agents, if the president dies the game is lost.", "No Russian. Only hip fire, no ADS.", "Fly by Night. When you down a person you have to rush to finish them.", "Basic bitch. You can't use your abilities. (You probably like pumpkin spiced lattes too)", "Makeshift guns. Each weapon has only 3 reloads", "Hot potato. ALL nades you come accross are live so yeet that bad boy.", "The floor is lava. You can only loot from the 1st floor up. (Second floor for you Americans)", "Crawl space. Ground floor (US:first floor) looting only"];
 
 
+//gear section
 
-// Character selectors with randomisers
+function gearFunction() {
+    document.getElementById("gear_output").innerHTML = gear[Math.floor(Math.random() * gear.length)];
+    }
+
+// Character selectors with randomisers fixed to not match
 
 function charac() {
 character1 = character[Math.floor(Math.random() * character.length)];
@@ -41,3 +46,8 @@ function charac3() {
 
     document.getElementById("character_output3").innerHTML = character3;
 }
+
+
+function spec() {
+    document.getElementById("special_output").innerHTML = special[Math.floor(Math.random() * special.length)];
+    }
