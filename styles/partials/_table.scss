@@ -1,2 +1,28 @@
 @use '../abstracts/index' as *;
 
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.column {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.column--container {
+    display: flex;
+    justify-content: center;
+    width: 280px;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.special--output {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}

@@ -28,61 +28,70 @@
 
         </div>
 
-        <button onclick="weapons(), medical(), gearFunction(), charac(), spec(), charac2(), charac3()">Get your strat.</button>
+        <div class="button-container"> <button onclick="weapons(), medical(), gearFunction(), charac(), spec(), charac2(), charac3()">Get your strat.</button> </div>
 
-        <div class="first-player column">
+        <div class="table">
 
-            <input type="text" placeholder="Player 1">
+            <div class="first-player column">
 
+                <div class="column--container">
+
+                    <input type="text" placeholder="Player 1">
+
+                    <p id="weapon_output"></p>
+
+                    <p id="meds_output"></p>
+                    
+                    <p id="gear_output"></p>
+                    
+                    <p id="character_output"></p>
+
+                </div>
+
+            </div>
+
+            <div class="second_player column">
+
+                <div class="column--container">
+
+                    <input type="text" placeholder="Player 2">
+
+                    <p id="weapon_output2"></p>
+
+                    <p id="meds_output2"></p>
+
+                    <p id="gear_output2"></p>
+
+                    <p id="character_output2"></p>
+
+                </div>
+                
+            </div>
+
+            <div class="third-player column">
+
+                <div class="column--container">
+
+                    <input type="text" placeholder="Player 3">
+
+                    <p id="weapon_output3"></p>
+
+                    <p id="meds_output3"></p>
+
+                    <p id="gear_output3"></p>
+
+                    <p id="character_output3"></p>
+
+                </div>
+
+            </div>
             
-            <p id="weapon_output"></p>
-
-            
-
-            <!-- This is the meds output area, the button will randomly call from the meds variable. -->
-            <p id="meds_output"></p>
-            
-            
-            <!-- The end of the meds section -->
-
-            <!--This is the gear selector and output area, the button will randomly call from the gear variable.  -->
-            <p id="gear_output"></p>
-            
-            <!--The end of the gear section  -->
-
-            <!--This is the character selector and output area, the button will randomly call from the character variable  -->
-
-
-            <p id="character_output"></p>
-
+            <div class="special--output">
+                <h3>Special team rule:</h3>
+                <p id="special_output"></p>
+            </div>
+        
         </div>
-
-        <div class="second_player column">
-
-            <input type="text" placeholder="Player 2">
-
-            <!-- <p id="meds_output2"></p> -->
-
-            <p id="character_output2"></p>
-            
-        </div>
-
-        <div class="third-player column">
-
-            <input type="text" placeholder="Player 3">
-
-            <p id="character_output3"></p>
-
-        </div>
-        <!--The end of the character section  -->
-
-
-        <!--This is the special selector and output area, the button will randomly call from the special variable  -->
-        <div class="special--output">
-            <h3>Special team rule:</h3>
-            <p id="special_output"></p>
-        </div>
-        <!-- The end of the special section -->
         <script src="scripts/roulette.js"></script>
     </body>
 </html>

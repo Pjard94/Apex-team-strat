@@ -15,17 +15,29 @@ const special = ["The winner takes it all. When you kill take their guns as your
 //weapon restrictions
 function weapons() {
     document.getElementById("weapon_output").innerHTML = weapon[Math.floor(Math.random() * weapon.length)];
+
+    document.getElementById("weapon_output2").innerHTML = weapon[Math.floor(Math.random() * weapon.length)];
+
+    document.getElementById("weapon_output3").innerHTML = weapon[Math.floor(Math.random() * weapon.length)];
     }
 
 //medical restrictions
 function medical() {
     document.getElementById("meds_output").innerHTML = meds[Math.floor(Math.random() * meds.length)];
+
+    document.getElementById("meds_output2").innerHTML = meds[Math.floor(Math.random() * meds.length)];
+
+    document.getElementById("meds_output3").innerHTML = meds[Math.floor(Math.random() * meds.length)];
     }
 
 //gear section
 
 function gearFunction() {
     document.getElementById("gear_output").innerHTML = gear[Math.floor(Math.random() * gear.length)];
+
+    document.getElementById("gear_output2").innerHTML = gear[Math.floor(Math.random() * gear.length)];
+
+    document.getElementById("gear_output3").innerHTML = gear[Math.floor(Math.random() * gear.length)];
     }
 
 // Character selectors with randomisers fixed to not match
