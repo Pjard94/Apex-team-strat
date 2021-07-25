@@ -13,26 +13,49 @@ let character3;
 const special = ["The winner takes it all. When you kill take their guns as your own.", "Stuck. The first guns you see, you pick up, they are your only guns for the game.", "Mr President. One of your players is the president, the other 2 are agents, if the president dies the game is lost.", "No Russian. Only hip fire, no ADS.", "Fly by Night. When you down a person you have to rush to finish them.", "Basic bitch. You can't use your abilities. (You probably like pumpkin spiced lattes too)", "Makeshift guns. Each weapon has only 3 reloads", "Hot potato. ALL nades you come accross are live so yeet that bad boy.", "The floor is lava. You can only loot from the 1st floor up. (Second floor for you Americans)", "Crawl space. Ground floor (US:first floor) looting only"];
 
 //Setting the amount of player outputs, so if only one/two/three are playing it will only show that many players.
-$('.one-player-only').click(function(){
-    $('.second-player').css("display", "none")
-    $('.third-player').css("display", "none")
-    $('#player-two-character-list').parent().css("display", "none")
-    $('#player-three-character-list').parent().css("display", "none")
-});
 
-$('.duos').click(function(){
-    $('.second-player').css("display", "flex")
-    $('.third-player').css("display", "none")
-    $('#player-two-character-list').parent().css("display", "unset")
-    $('#player-three-character-list').parent().css("display", "none")
-});
 
-$('.standard-game').click(function(){
-    $('.second-player').css("display", "flex")
-    $('.third-player').css("display", "flex")
-    $('#player-two-character-list').parent().css("display", "unset")
-    $('#player-three-character-list').parent().css("display", "unset")
-});
+function playerOne(){
+    document.getElementById("second-player").style.display = "none"
+    document.getElementById("third-player").style.display = "none"
+    document.getElementById("player-two-character-list").parentElement.style.display = "none"
+    document.getElementById("player-three-character-list").parentElement.style.display = "none"
+};
+
+function playerTwo(){
+    document.getElementById("second-player").style.display = "flex"
+    document.getElementById("third-player").style.display = "none"
+    document.getElementById("player-two-character-list").parentElement.style.display = "unset"
+    document.getElementById("player-three-character-list").parentElement.style.display = "none"
+};
+
+function playerThree(){
+    document.getElementById("second-player").style.display = "flex"
+    document.getElementById("third-player").style.display = "flex"
+    document.getElementById("player-two-character-list").parentElement.style.display = "unset"
+    document.getElementById("player-three-character-list").parentElement.style.display = "unset"
+};
+// Jquery doesn't work where i am hosting my site but it's nice to have this for a reference
+// $('.one-player-only').click(function(){
+//     $('.').css("display", "none")
+//     $('.third-player').css("display", "none")
+//     $('#player-two-character-list').parent().css("display", "none")
+//     $('#player-three-character-list').parent().css("display", "none")
+// });
+
+// $('.duos').click(function(){
+//     $('.second-player').css("display", "flex")
+//     $('.third-player').css("display", "none")
+//     $('#player-two-character-list').parent().css("display", "unset")
+//     $('#player-three-character-list').parent().css("display", "none")
+// });
+
+// $('.standard-game').click(function(){
+//     $('.second-player').css("display", "flex")
+//     $('.third-player').css("display", "flex")
+//     $('#player-two-character-list').parent().css("display", "unset")
+//     $('#player-three-character-list').parent().css("display", "unset")
+// });
 
 
 //weapon restrictions
