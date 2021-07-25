@@ -5,10 +5,19 @@ const meds = ["Phoenix kits are a lie", "No Syringes", "Shields only", "No medki
 
 const gear = ["No head (no helmet)", "Upgrade only", "Body armour only", "No Body. You can't repair or pick up body armour.", "No Back pack", "Pauper. White or next lowest armour", "Milion dollar man. Only Gold is worthy of adorning you"];
 
-const character = ["Loba", "Fuse", "Horizon", "Octane", "Wraith", "Wattson", "Revenant", "Rampart", "Pathfinder", "Mirage", "Lifeline", "Gibraltar", "Crypto", "Bloodhound", "Caustic", "Bangalore", "Valkyrie"];
+// all the characters after bangalore are optional later
+const characterInput1 = ["Wraith", "Pathfinder", "Lifeline", "Gibraltar", "Bloodhound", "Bangalore", "Caustic", "Mirage", "Octane", "Wattson", "Crypto", "Revenant", "Loba", "Horizon", "Rampart", "Fuse", "Valkyrie"];
+const characterInput3 = ["Wraith", "Pathfinder", "Lifeline", "Gibraltar", "Bloodhound", "Bangalore", "Caustic", "Mirage", "Octane", "Wattson", "Crypto", "Revenant", "Loba", "Horizon", "Rampart", "Fuse", "Valkyrie"];
+const characterInput2 = ["Wraith", "Pathfinder", "Lifeline", "Gibraltar", "Bloodhound", "Bangalore", "Caustic", "Mirage", "Octane", "Wattson", "Crypto", "Revenant", "Loba", "Horizon", "Rampart", "Fuse", "Valkyrie"];
 let character1;
 let character2;
 let character3;
+
+let firstList = document.getElementsByClassName('first-checkbox-list')
+let secondList = document.getElementsByClassName('second-checkbox-list')
+let thirdList = document.getElementsByClassName('third-checkbox-list')
+
+const checkableCharacters = ["Caustic", "Mirage", "Octane", "Wattson", "Crypto", "Revenant", "Loba", "Horizon", "Rampart", "Fuse", "Valkyrie"]
 
 const special = ["The winner takes it all. When you kill take their guns as your own.", "Stuck. The first guns you see, you pick up, they are your only guns for the game.", "Mr President. One of your players is the president, the other 2 are agents, if the president dies the game is lost.", "No Russian. Only hip fire, no ADS.", "Fly by Night. When you down a person you have to rush to finish them.", "Basic bitch. You can't use your abilities. (You probably like pumpkin spiced lattes too)", "Makeshift guns. Each weapon has only 3 reloads", "Hot potato. ALL nades you come accross are live so yeet that bad boy.", "The floor is lava. You can only loot from the 1st floor up. (Second floor for you Americans)", "Crawl space. Ground floor (US:first floor) looting only"];
 
@@ -91,39 +100,64 @@ function gearFunction() {
 
 //need to add a check for the character selection area
 
-$('caustic-check').ready(function(){//this checks one of the check buttons but i need to iterate through the lists
-    $('input[type="checkbox"]').click(function(){
-        if($(this).prop("checked") == true){
-            console.log("Checkbox is checked.");
-        }
-        else if($(this).prop("checked") == false){
-            console.log("Checkbox is unchecked.");
-        }
-    });
-});
-
+// $('caustic-check').ready(function(){//this checks one of the check buttons but i need to iterate through the lists
+//     $('input[type="checkbox"]').click(function(){
+//         if($(this).prop("checked") == true){
+//             console.log("Checkbox is checked.");
+//         }
+//         else if($(this).prop("checked") == false){
+//             console.log("Checkbox is unchecked.");
+//         }
+//     });
+// });
 
 function charac() {
-character1 = character[Math.floor(Math.random() * character.length)];
+    // for(i=0; i < firstList.length; i++){
+    //     if(firstList[i].checked) {
+    //         characterInput1.push(checkableCharacters[i]);
+    //         console.log(characterInput1)
+            // attempted to add characters to the variables using a loop but would add variables each time still need to try disabling and unchecking the boxes.
+    //     }
+        
+    // }
+
+character1 = characterInput1[Math.floor(Math.random() * characterInput1.length)];
 
 document.getElementById("character_output").innerHTML = character1;
 }
 
 function charac2() {
-    character2 = character[Math.floor(Math.random() * character.length)];
+    // for(i=0; i < secondList.length; i++){
+    //     if(secondList[i].checked) {
+    //         characterInput2.push(checkableCharacters[i]);
+    //         console.log(characterInput2)
+    //     }
+        
+    // }
+
+    character2 = characterInput2[Math.floor(Math.random() * characterInput2.length)];
 
     while ( character2 === character1) {
-        character2 = character[Math.floor(Math.random() * character.length)];
+        character2 = characterInput2[Math.floor(Math.random() * characterInput2.length)];
     }
 
     document.getElementById("character_output2").innerHTML = character2;
 }
 
 function charac3() {
-    character3 = character[Math.floor(Math.random() * character.length)];
+
+    // for(i=0; i < thirdList.length; i++){
+    //     if(thirdList[i].checked) {
+    //         characterInput3.push(checkableCharacters[i]);
+    //         console.log(characterInput3);
+    //     }
+        
+    // }
+
+    character3 = characterInput3[Math.floor(Math.random() * characterInput3.length)];
 
     while (character3 === character1 || character3 === character2) {
-        character3 = character[Math.floor(Math.random() * character.length)];
+        character3 = characterInput3[Math.floor(Math.random() * characterInput3.length)];
     } 
 
     document.getElementById("character_output3").innerHTML = character3;
