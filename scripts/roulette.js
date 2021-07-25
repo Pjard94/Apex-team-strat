@@ -6,9 +6,9 @@ const meds = ["Phoenix kits are a lie", "No Syringes", "Shields only", "No medki
 const gear = ["No head (no helmet)", "Upgrade only", "Body armour only", "No Body. You can't repair or pick up body armour.", "No Back pack", "Pauper. White or next lowest armour", "Milion dollar man. Only Gold is worthy of adorning you"];
 
 // all the characters after bangalore are optional later
-const characterInput1 = ["Wraith", "Pathfinder", "Lifeline", "Gibraltar", "Bloodhound", "Bangalore", "Caustic", "Mirage", "Octane", "Wattson", "Crypto", "Revenant", "Loba", "Horizon", "Rampart", "Fuse", "Valkyrie"];
-const characterInput3 = ["Wraith", "Pathfinder", "Lifeline", "Gibraltar", "Bloodhound", "Bangalore", "Caustic", "Mirage", "Octane", "Wattson", "Crypto", "Revenant", "Loba", "Horizon", "Rampart", "Fuse", "Valkyrie"];
-const characterInput2 = ["Wraith", "Pathfinder", "Lifeline", "Gibraltar", "Bloodhound", "Bangalore", "Caustic", "Mirage", "Octane", "Wattson", "Crypto", "Revenant", "Loba", "Horizon", "Rampart", "Fuse", "Valkyrie"];
+const characterInput1 = ["Wraith", "Pathfinder", "Lifeline", "Gibraltar", "Bloodhound", "Bangalore"];
+const characterInput3 = ["Wraith", "Pathfinder", "Lifeline", "Gibraltar", "Bloodhound", "Bangalore"];
+const characterInput2 = ["Wraith", "Pathfinder", "Lifeline", "Gibraltar", "Bloodhound", "Bangalore"];
 let character1;
 let character2;
 let character3;
@@ -112,14 +112,12 @@ function gearFunction() {
 // });
 
 function charac() {
-    // for(i=0; i < firstList.length; i++){
-    //     if(firstList[i].checked) {
-    //         characterInput1.push(checkableCharacters[i]);
-    //         console.log(characterInput1)
-            // attempted to add characters to the variables using a loop but would add variables each time still need to try disabling and unchecking the boxes.
-    //     }
+    for(i=0; i < firstList.length; i++){
+        if(firstList[i].checked) {
+            characterInput1.push(checkableCharacters[i]);
+        }
         
-    // }
+    }
 
 character1 = characterInput1[Math.floor(Math.random() * characterInput1.length)];
 
@@ -127,13 +125,12 @@ document.getElementById("character_output").innerHTML = character1;
 }
 
 function charac2() {
-    // for(i=0; i < secondList.length; i++){
-    //     if(secondList[i].checked) {
-    //         characterInput2.push(checkableCharacters[i]);
-    //         console.log(characterInput2)
-    //     }
+    for(i=0; i < secondList.length; i++){
+        if(secondList[i].checked) {
+            characterInput2.push(checkableCharacters[i]);
+        }
         
-    // }
+    }
 
     character2 = characterInput2[Math.floor(Math.random() * characterInput2.length)];
 
@@ -146,13 +143,12 @@ function charac2() {
 
 function charac3() {
 
-    // for(i=0; i < thirdList.length; i++){
-    //     if(thirdList[i].checked) {
-    //         characterInput3.push(checkableCharacters[i]);
-    //         console.log(characterInput3);
-    //     }
+    for(i=0; i < thirdList.length; i++){
+        if(thirdList[i].checked) {
+            characterInput3.push(checkableCharacters[i]);
+        }
         
-    // }
+    }
 
     character3 = characterInput3[Math.floor(Math.random() * characterInput3.length)];
 
@@ -163,6 +159,10 @@ function charac3() {
     document.getElementById("character_output3").innerHTML = character3;
 }
 
+
+function uncheck(){
+    document.querySelectorAll('input[type="checkbox"]').forEach(el => el.checked = false);
+}
 
 function spec() {
     document.getElementById("special_output").innerHTML = special[Math.floor(Math.random() * special.length)];
