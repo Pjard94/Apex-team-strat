@@ -1,9 +1,9 @@
 // Global Variables
-const weapon = ["Pistols only", "Shotguns only", "LMGS only", "Sniper & Shotguns", "SMG only", "Assault rifles only","No Pink weapons (i.e.kraber)", "Only Light ammo", "Only Heavy Ammo", "Snipers only", "Only Energy Ammo", "No Shotguns", "No Snipers", "No Assualt Rifles", "No SMGs", "No Pistols", "No Scopes", "Hunter. Bow and shotguns only"];
+const weapon = ["Pistols only", "Shotguns only", "LMGS only", "Sniper & Shotguns", "SMG only", "Assault rifles only","No Pink weapons (i.e.kraber)", "Only Light ammo", "Only Heavy Ammo", "Snipers only", "Only Energy Ammo", "No Shotguns", "No Snipers", "No Assualt Rifles", "No SMGs", "No Pistols", "No Scopes", "Hunter. Bow and shotguns only", "Marksman only"];
 
 const meds = ["Phoenix kits are a lie", "No Syringes", "Shields only", "No medkits", "No shield cells", "No shield batteries", "Health heals only", "Small heals only", "Big heals only" ];
 
-const gear = ["No head (no helmet)", "Upgrade only", "Body armour only", "No Body. You can't repair or pick up body armour.", "No Back pack", "Pauper. White or next lowest armour", "Milion dollar man. Only Gold is worthy of adorning you"];
+const gear = ["No head (no helmet)", "Upgrade only", "Body armour only", "No Body. You can't repair body armour.", "No Back pack", "Pauper. White or next lowest armour (ie. blue armour if no white can be found)", "Milion dollar man. Only Gold is worthy of adorning you"];
 
 // all the characters after bangalore are optional later
 const characterInput1 = ["Wraith", "Pathfinder", "Lifeline", "Gibraltar", "Bloodhound", "Bangalore"];
