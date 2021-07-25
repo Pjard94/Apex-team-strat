@@ -13,9 +13,9 @@
 
                 <div class="nav-bar">
                     <ul>
-                        <li><a href="#">Main</a></li>
+                        <li><a href="#table">Strat</a></li>
                         <li><a href="#">About</a></li>
-                        <li><a href="#">Strat List</a></li>
+                        <li><a href="#player-character-checklists">Character Lists</a></li>
                         <li><a href="#">Contact Us</a></li>
                     </ul>
                 </div>
@@ -26,11 +26,18 @@
 
             <h2>Welcome félagi fighter, are you ready to face my challenge?</h2>
 
+            <p></p>
+
         </div>
 
         <div class="button-container"> <button onclick="weapons(), medical(), gearFunction(), charac(), spec(), charac2(), charac3()">Get your strat.</button> </div>
 
+        <button class="one-player-only">1 player</button> <button class="duos">2 players</button> <button class="standard-game">3 Players</button>
+
+
         <div class="table">
+
+            <!-- Output area for the strat roulette -->
 
             <div class="first-player column">
 
@@ -50,7 +57,7 @@
 
             </div>
 
-            <div class="second_player column">
+            <div class="second-player column">
 
                 <div class="column--container">
 
@@ -95,8 +102,8 @@
 
                 <h2>Player one character checklist</h2>
 
-                <ul>
-                    <li><input type="checkbox" checked="checked" class="character-check"> <label>Caustic</label></li>
+                <ul id="player-one-character-list">
+                    <li><input type="checkbox" checked="checked" class="character-check caustic-check"> <label>Caustic</label></li>
                     <li><input type="checkbox" checked="checked" class="character-check"> <label>Mirage</label></li>
                     <li><input type="checkbox" checked="checked" class="character-check"> <label>Octane</label></li>
                     <li><input type="checkbox" checked="checked" class="character-check"> <label>Wattson</label></li>
@@ -113,7 +120,7 @@
 
                 <h2>Player two character checklist</h2>
 
-                <ul>
+                <ul id="player-two-character-list">
                     <li><input type="checkbox" checked="checked" class="character-check"> <label>Caustic</label></li>
                     <li><input type="checkbox" checked="checked" class="character-check"> <label>Mirage</label></li>
                     <li><input type="checkbox" checked="checked" class="character-check"> <label>Octane</label></li>
@@ -131,21 +138,22 @@
 
                 <h2>Player three character checklist</h2>
 
-                    <ul>
-                        <li><input type="checkbox" checked="checked" class="character-check"> <label>Caustic</label></li>
-                        <li><input type="checkbox" checked="checked" class="character-check"> <label>Mirage</label></li>
-                        <li><input type="checkbox" checked="checked" class="character-check"> <label>Octane</label></li>
-                        <li><input type="checkbox" checked="checked" class="character-check"> <label>Wattson</label></li>
-                        <li><input type="checkbox" checked="checked" class="character-check"> <label>Crypto</label></li>
-                        <li><input type="checkbox" checked="checked" class="character-check"> <label>Revenant</label></li>
-                        <li><input type="checkbox" checked="checked" class="character-check"> <label>Horizon</label></li>
-                        <li><input type="checkbox" checked="checked" class="character-check"> <label>Fuse</label></li>
-                        <li><input type="checkbox" checked="checked" class="character-check"> <label>Valkyrie</label></li>
-                    </ul>
+                <ul id="player-three-character-list">
+                    <li><input type="checkbox" checked="checked" class="character-check"> <label>Caustic</label></li>
+                    <li><input type="checkbox" checked="checked" class="character-check"> <label>Mirage</label></li>
+                    <li><input type="checkbox" checked="checked" class="character-check"> <label>Octane</label></li>
+                    <li><input type="checkbox" checked="checked" class="character-check"> <label>Wattson</label></li>
+                    <li><input type="checkbox" checked="checked" class="character-check"> <label>Crypto</label></li>
+                    <li><input type="checkbox" checked="checked" class="character-check"> <label>Revenant</label></li>
+                    <li><input type="checkbox" checked="checked" class="character-check"> <label>Horizon</label></li>
+                    <li><input type="checkbox" checked="checked" class="character-check"> <label>Fuse</label></li>
+                    <li><input type="checkbox" checked="checked" class="character-check"> <label>Valkyrie</label></li>
+                </ul>
 
             </div>
         
         </div>
+        <script src="scripts/jquery-3.6.0.min.js"></script>
         <script src="scripts/roulette.js"></script>
     </body>
 </html>
