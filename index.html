@@ -3,6 +3,7 @@
     <head>
         <title>Apex Strat Roulette</title>
         <link rel="stylesheet" href="styles/style.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     </head>
     <body>
 
@@ -30,34 +31,34 @@
 
         </div>
 
-        <div class="button-container"> <button onclick="weapons(), medical(), gearFunction(), charac(), charac2(), charac3(), spec(), uncheck()">Get your strat.</button> </div>
+        <div class="button-container"> <button id="stratButton">Get your strat.</button> </div>
 
-        <button class="one-player-only" onclick="playerOne()">1 player</button> <button class="duos" onclick="playerTwo()">2 players</button> <button class="standard-game" onclick="playerThree()">3 Players</button>
+        <button id="onePlayer" class="one-player-only">1 player</button> <button id="twoPlayers" class="duos">2 players</button> <button id="threePlayers" class="standard-game">3 Players</button>
 
 
         <div class="table">
 
             <!-- Output area for the strat roulette -->
 
-            <div id="first-player" class="column">
+            <div id="playerOne" class="column">
 
                 <div class="column--container">
 
                     <input type="text" placeholder="Player 1">
 
-                    <p id="weapon_output" class="outputs"></p>
+                    <p id="weapon_output1" class="outputs"></p>
 
-                    <p id="meds_output" class="outputs"></p>
+                    <p id="meds_output1" class="outputs"></p>
                     
-                    <p id="gear_output" class="outputs"></p>
+                    <p id="gear_output1" class="outputs"></p>
                     
-                    <p id="character_output" class="outputs"></p>
+                    <p id="character_output1" class="outputs"></p>
 
                 </div>
 
             </div>
 
-            <div id="second-player" class="column">
+            <div id="playerTwo" class="column">
 
                 <div class="column--container">
 
@@ -75,7 +76,7 @@
                 
             </div>
 
-            <div id="third-player" class="column">
+            <div id="playerThree" class="column">
 
                 <div class="column--container">
 
@@ -98,62 +99,62 @@
                 <p id="special_output"  class="outputs"></p>
             </div>
 
-            <div class="player-character-checklists">
+            <div id="playerOneCharacters" class="player-character-checklists">
 
                 <h2>Player one character checklist</h2>
 
                 <ul id="player-one-character-list">
-                    <li><input type="checkbox" checked="checked" class="character-check first-checkbox-list"> <label>Caustic</label></li>
-                    <li><input type="checkbox" checked="checked" class="character-check first-checkbox-list"> <label>Mirage</label></li>
-                    <li><input type="checkbox" checked="checked" class="character-check first-checkbox-list"> <label>Octane</label></li>
-                    <li><input type="checkbox" checked="checked" class="character-check first-checkbox-list"> <label>Wattson</label></li>
-                    <li><input type="checkbox" checked="checked" class="character-check first-checkbox-list"> <label>Crypto</label></li>
-                    <li><input type="checkbox" checked="checked" class="character-check first-checkbox-list"> <label>Revenant</label></li>
-                    <li><input type="checkbox" checked="checked" class="character-check first-checkbox-list"> <label>Loba</label></li>
-                    <li><input type="checkbox" checked="checked" class="character-check first-checkbox-list"> <label>Horizon</label></li>
-                    <li><input type="checkbox" checked="checked" class="character-check first-checkbox-list"> <label>Rampart</label></li>
-                    <li><input type="checkbox" checked="checked" class="character-check first-checkbox-list"> <label>Fuse</label></li>
-                    <li><input type="checkbox" checked="checked" class="character-check first-checkbox-list"> <label>Valkyrie</label></li>
+                    <li><input id="causticOne" type="checkbox" checked="checked" class="character-check first-checkbox-list" value="Caustic"> <label for="causticOne">Caustic</label></li>
+                    <li><input id="mirageOne" type="checkbox" checked="checked" class="character-check first-checkbox-list" value="Mirage"> <label for="mirageOne">Mirage</label></li>
+                    <li><input id="octaneOne" type="checkbox" checked="checked" class="character-check first-checkbox-list" value="Octane"> <label for="octaneOne">Octane</label></li>
+                    <li><input id="wattsonOne" type="checkbox" checked="checked" class="character-check first-checkbox-list" value="Wattson"> <label for="wattsonOne">Wattson</label></li>
+                    <li><input id="cryptoOne" type="checkbox" checked="checked" class="character-check first-checkbox-list" value="Crypto"> <label for="cryptoOne">Crypto</label></li>
+                    <li><input id="revenantOne" type="checkbox" checked="checked" class="character-check first-checkbox-list" value="Revenant"> <label for="revenantOne">Revenant</label></li>
+                    <li><input id="lobaOne" type="checkbox" checked="checked" class="character-check first-checkbox-list" value="Loba"> <label for="lobaOne">Loba</label></li>
+                    <li><input id="horizonOne" type="checkbox" checked="checked" class="character-check first-checkbox-list" value="Horizon"> <label for="horizonOne">Horizon</label></li>
+                    <li><input id="rampartOne" type="checkbox" checked="checked" class="character-check first-checkbox-list" value="Rampart"> <label for="rampartOne">Rampart</label></li>
+                    <li><input id="fuseOne" type="checkbox" checked="checked" class="character-check first-checkbox-list" value="Fuse"> <label for="fuseOne">Fuse</label></li>
+                    <li><input id="valkyrieOne" type="checkbox" checked="checked" class="character-check first-checkbox-list" value="Valkyrie"> <label for="valkyrieOne">Valkyrie</label></li>
                 </ul>
 
             </div>
 
-            <div class="player-character-checklists">
+            <div id="playerTwoCharacters" class="player-character-checklists">
 
                 <h2>Player two character checklist</h2>
 
                 <ul id="player-two-character-list">
-                    <li><input type="checkbox" checked="checked" class="character-check second-checkbox-list"> <label>Caustic</label></li>
-                    <li><input type="checkbox" checked="checked" class="character-check second-checkbox-list"> <label>Mirage</label></li>
-                    <li><input type="checkbox" checked="checked" class="character-check second-checkbox-list"> <label>Octane</label></li>
-                    <li><input type="checkbox" checked="checked" class="character-check second-checkbox-list"> <label>Wattson</label></li>
-                    <li><input type="checkbox" checked="checked" class="character-check second-checkbox-list"> <label>Crypto</label></li>
-                    <li><input type="checkbox" checked="checked" class="character-check second-checkbox-list"> <label>Revenant</label></li>
-                    <li><input type="checkbox" checked="checked" class="character-check second-checkbox-list"> <label>Loba</label></li>
-                    <li><input type="checkbox" checked="checked" class="character-check second-checkbox-list"> <label>Horizon</label></li>
-                    <li><input type="checkbox" checked="checked" class="character-check second-checkbox-list"> <label>Rampart</label></li>
-                    <li><input type="checkbox" checked="checked" class="character-check second-checkbox-list"> <label>Fuse</label></li>
-                    <li><input type="checkbox" checked="checked" class="character-check second-checkbox-list"> <label>Valkyrie</label></li>
+                    <li><input id="causticTwo" type="checkbox" checked="checked" class="character-check second-checkbox-list" value="Caustic"> <label for="causticTwo">Caustic</label></li>
+                    <li><input id="mirageTwo" type="checkbox" checked="checked" class="character-check second-checkbox-list" value="Mirage"> <label for="mirageTwo">Mirage</label></li>
+                    <li><input id="octaneTwo" type="checkbox" checked="checked" class="character-check second-checkbox-list" value="Octane"> <label for="octaneTwo">Octane</label></li>
+                    <li><input id="wattsonTwo" type="checkbox" checked="checked" class="character-check second-checkbox-list" value="Wattson"> <label for="wattsonTwo">Wattson</label></li>
+                    <li><input id="cryptoTwo" type="checkbox" checked="checked" class="character-check second-checkbox-list" value="Crypto"> <label for="cryptoTwo">Crypto</label></li>
+                    <li><input id="revenantTwo" type="checkbox" checked="checked" class="character-check second-checkbox-list" value="Revenant"> <label for="revenantTwo">Revenant</label></li>
+                    <li><input id="lobaTwo" type="checkbox" checked="checked" class="character-check second-checkbox-list" value="Loba"> <label for="lobaTwo">Loba</label></li>
+                    <li><input id="horizonTwo" type="checkbox" checked="checked" class="character-check second-checkbox-list" value="Horizon"> <label for="horizonTwo">Horizon</label></li>
+                    <li><input id="rampartTwo" type="checkbox" checked="checked" class="character-check second-checkbox-list" value="Rampart"> <label for="rampartTwo">Rampart</label></li>
+                    <li><input id="fuseTwo" type="checkbox" checked="checked" class="character-check second-checkbox-list" value="Fuse"> <label for="fuseTwo">Fuse</label></li>
+                    <li><input id="valkyrieTwo" type="checkbox" checked="checked" class="character-check second-checkbox-list" value="Valkyrie"> <label for="valkyrieTwo">Valkyrie</label></li>
                 </ul>
 
             </div>
 
-            <div class="player-character-checklists">
+            <div id="playerThreeCharacters" class="player-character-checklists">
 
                 <h2>Player three character checklist</h2>
 
                 <ul id="player-three-character-list">
-                    <li><input type="checkbox" checked="checked" class="character-check third-checkbox-list"> <label>Caustic</label></li>
-                    <li><input type="checkbox" checked="checked" class="character-check third-checkbox-list"> <label>Mirage</label></li>
-                    <li><input type="checkbox" checked="checked" class="character-check third-checkbox-list"> <label>Octane</label></li>
-                    <li><input type="checkbox" checked="checked" class="character-check third-checkbox-list"> <label>Wattson</label></li>
-                    <li><input type="checkbox" checked="checked" class="character-check third-checkbox-list"> <label>Crypto</label></li>
-                    <li><input type="checkbox" checked="checked" class="character-check third-checkbox-list"> <label>Revenant</label></li>
-                    <li><input type="checkbox" checked="checked" class="character-check third-checkbox-list"> <label>Loba</label></li>
-                    <li><input type="checkbox" checked="checked" class="character-check third-checkbox-list"> <label>Horizon</label></li>
-                    <li><input type="checkbox" checked="checked" class="character-check third-checkbox-list"> <label>Rampart</label></li>
-                    <li><input type="checkbox" checked="checked" class="character-check third-checkbox-list"> <label>Fuse</label></li>
-                    <li><input type="checkbox" checked="checked" class="character-check third-checkbox-list"> <label>Valkyrie</label></li>
+                    <li><input id="causticThree" type="checkbox" checked="checked" class="character-check third-checkbox-list" value="Caustic"> <label for="causticThree">Caustic</label></li>
+                    <li><input id="mirageThree" type="checkbox" checked="checked" class="character-check third-checkbox-list" value="Mirage"> <label for="mirageThree">Mirage</label></li>
+                    <li><input id="octaneThree" type="checkbox" checked="checked" class="character-check third-checkbox-list" value="Octane"> <label for="octaneThree">Octane</label></li>
+                    <li><input id="wattsonThree" type="checkbox" checked="checked" class="character-check third-checkbox-list" value="Wattson"> <label for="wattsonThree">Wattson</label></li>
+                    <li><input id="cryptoThree" type="checkbox" checked="checked" class="character-check third-checkbox-list" value="Crypto"> <label for="cryptoThree">Crypto</label></li>
+                    <li><input id="revenantThree" type="checkbox" checked="checked" class="character-check third-checkbox-list" value="Revenant"> <label for="revenantThree">Revenant</label></li>
+                    <li><input id="lobaThree" type="checkbox" checked="checked" class="character-check third-checkbox-list" value="Loba"> <label for="lobaThree">Loba</label></li>
+                    <li><input id="horizonThree" type="checkbox" checked="checked" class="character-check third-checkbox-list" value="Horizon"> <label for="horizonThree">Horizon</label></li>
+                    <li><input id="rampartThree" type="checkbox" checked="checked" class="character-check third-checkbox-list" value="Rampart"> <label for="rampartThree">Rampart</label></li>
+                    <li><input id="fuseThree" type="checkbox" checked="checked" class="character-check third-checkbox-list" value="Fuse"> <label for="fuseThree">Fuse</label></li>
+                    <li><input id="valkyrieThree" type="checkbox" checked="checked" class="character-check third-checkbox-list" value="Valkyrie"> <label for="valkyrieThree">Valkyrie</label></li>
                 </ul>
 
             </div>
